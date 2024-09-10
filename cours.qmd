@@ -1,0 +1,467 @@
+---
+title: "Collaborative projects with Github"
+subtitle: "Introduction and good practices"
+author: "Émilien Schultz - emilien.schultz@ensae.fr"
+format: 
+    revealjs:
+        slide-number: true
+---
+
+
+## Fist, who are we ?
+
+- **Me** : somewhere in the computational social sciences
+- **You** ?
+    - What software/OS are you using ?
+    - Do you know how to use command line interfaces ?
+    - Have you heard about git/github a little ?
+
+
+## Starting point
+
+<br>
+
+**You are going to carry out a collaborative project with programming & data**
+
+<br>
+
+How to ensure a collaborative project involving programming/data analysis runs smoothly?
+
+## Goals
+
+
+- Some best practices for collaboration around programming
+- Get familiar with GitHub
+- Start the structure of a project
+- Available resources
+- Discuss about coding practices
+
+*This session will be language agnostique*
+
+## Why using it in general ?
+
+::: {.callout-warning title="Disclamer"}
+You don't have to know everything
+
+- There are numerous tutorials
+- The general philosophy comes first
+- Nevertheless, it can be very useful
+:::
+
+## What does it mean to code for data science ?
+
+- A Set of Practices
+    - From script to software
+    - From data scientist to computer scientist
+- A Set of Technologies
+    - Different languages, software, etc.
+- A Set of More or Less Interdependent Artifacts
+    - Files, texts, folders, application
+    - Intermediate, final
+
+## With the challenge of working together
+
+- Sharing storage 
+- Communicating over various channels
+- Keeping track of various versions
+- ...
+
+## So, what possibily could go wrong ?
+
+- Different coding styles leading to chaos
+- Asynchronous contributions : conflicts ...
+- Profusion of versions
+- Increased likelihood of errors
+- ...
+
+**How to avoid problems (at least some) ?**
+
+
+## A classic situation {style="text-align: center;"}
+
+![](./img/finalfinal.png){width=600 fig-align="center"}
+
+There are solutions against that...
+
+
+## First rule : Structuring a Project
+
+- Separate code from data
+    - Different logic
+    - Different tools
+- Document / Comment your productions
+    - Be explicit
+- Modularize : create distinct elements
+
+## Second rule : a common file system
+
+- data in a data directory
+- scripts in a script directory
+- ...
+
+**What are the other elements of a project ?**
+
+# Next step : code management
+
+## What is code versionning ?
+
+- *Option 1* : there is only one document and you send each version by email
+    - slow and a lots of version
+- *Option 2* : there is only one document online on the cloud and you work on it
+    - difficulty to keep track of the versions
+    - can be chaos
+- *Option 3* : each contribution is clearly identified in a shared file system with clear rules of addition
+
+**Entering Git & Github**
+
+## Code versioning is old
+
+- Tools like RCS, CVS, or Subversion around since the early 1980s
+    - Some readings : [Industrial public goods: A genesis of the insertion of free software in Silicon Valley, Gabriel Alcaras, Sociologie du travail, 2020](https://journals.openedition.org/sdt/33283)
+- Leading the way to distributed tools
+
+**Somehow, it is a meta file organisation that keeps track of contributions and force you to (some) good practices**
+
+## Git and the Linux history
+
+- An history born from the free software movement
+- A bazar of contribution
+    - No vertical integration
+- Linux Torvald benevolent dictator
+    - [Obligatory point of passage](https://blog.brachiosoft.com/en/posts/git/)
+- The big question :
+    - How to collabore on code
+
+## Git {style="text-align: center;"}
+
+![](./img/gitxkcd.png)
+
+[Credits : xkcd](https://xkcd.com/1597/)
+
+## How does it work
+
+- A base unit : the repository containing everything
+- A network of contribution with a unique id
+- Everything recorded
+- Possibility to have parallel versions
+
+![[Source : Lutece.paris.fr](https://lutece.paris.fr/support/jsp/site/Portal.jsp?page=wiki&view=page&page_name=git&language=fr)](./img/branches.png){weight=500}
+
+**A world in itself...**
+
+
+## What is Git exactly ?
+
+Git is a command line tool which allow to :
+
+- add modifications to this structure
+- manage changes (back, forward, fusions)
+- natively installed on unix systems
+
+Over time
+
+- embedded in other tools (VS code)
+    - [There are GUI](https://git-scm.com/downloads/guis)
+- became an infrastructure of programming practices & OS
+
+````
+$ git
+````
+
+## Workflow {style="text-align: center;"}
+
+![](./img/git-committing.svg)
+
+## Small demo with the slides
+
+- [First configure git](https://swcarpentry.github.io/git-novice/02-setup.html)
+- Then, initializing a git repo (CLI is useful)
+    - `git init` => a .git directory
+    - `git status`
+    - `git add FILE` => staging area
+    - `git diff`
+    - `git commit` -m "MESSAGE"
+    - `git log`
+
+## Git messages {style="text-align: center;"}
+
+Clear messages if possible...
+
+![](./img/git_commit_2x.png)
+
+[Credit: xkcd](https://xkcd.com/1296/)
+
+## Possibility to see the diff
+
+- with specific commits
+- with specific files
+    - `git diff IDCOMIT FILE`
+
+## Possibility to restore
+
+- `git restore FILE`
+- `git reset --hard`
+
+## 
+
+::: {.callout-important title="Code & Data"}
+Git is not designed to version data
+
+Other solutions as [Git LFS](https://git-lfs.com/) or [Zenodo](https://zenodo.org/) for research.
+:::
+
+# From local to cloud
+
+## Github genesis
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+- A company built on git in 2008 
+    - Bought by Microsoft in 2018 (mutation of OS)
+- Basically : Git on cloud plus services
+    - Centralized repository
+- A system of rights to access (maintainer, contributor, etc.)
+- A new grammar of how to contribute
+    - push, pull, pull request, etc.
+
+:::
+
+::: {.column width="30%"}
+
+![](./img/octocat.jpg)
+[Build your octocat](https://myoctocat.com/build-your-octocat/)
+
+:::
+::::
+
+## A plateforme for projects
+
+- A central repository that connect developers and users
+    - a "community"
+- Allow contributions to be visible
+- Allow discussions
+
+Why to use it ?
+
+- Reproducibility
+- Transparency
+- Ease of collaboration
+- Communicating your work
+- Never lose a file
+- Work from multiple machines seemlessly
+
+## Github : a social media
+
+- A showcase of projects
+    - Stars
+- A platform to stay updated
+    - Versions & contributions
+- A space for socializing & exchanging
+    - Issues
+    - Communities
+
+## Let's have a look : the most famous repository
+
+- [Most famous repository](https://github.com/EvanLi/Github-Ranking)
+- [Map of Github](https://anvaka.github.io/map-of-github/#2/0/0) 
+
+<!-- Would be interesting to dig in the existing map of github -->
+
+## A lot of services
+
+- Actions (Continuous integrations)
+- Github pages
+- Wiki
+- ...
+
+## Github is not alone
+
+Other open-source code-sharing platform ("forges" in French)
+
+- SourceForge
+- Bitbucket
+- Gitlab
+- Gitti
+
+## Diversity of uses
+
+- CLI
+- In other tools
+    - VS Code
+    - R Studio
+    - Jupyter
+- GUI 
+    - Github Desktop
+
+## Let's have a look with CLI
+
+Let's put our slides on Github
+
+- git init / git clone
+- **git pull**
+- git status
+- git remote -v
+- git add
+- git commit
+- **git push**
+- ...
+
+## Complete worklow {style="text-align: center;"}
+
+![](./img/githubflow.png)
+
+## Authentification
+
+It can sometime be tricky...
+
+- HTTPS
+- SSH
+
+[How to setup SSH keys](https://swcarpentry.github.io/git-novice/07-github.html)
+
+## Initialize your Github repository
+
+Hands one :  create your first repository
+
+- create one from Github
+- modify the github README
+- clone it on your computer
+- make a modification + push
+
+## Give permission
+
+- Give permission to a colleague to modify your repository
+- Make him/her do a change
+- Then, try yourself to make a change
+
+## [Advanced point] How to resolve conflicts 
+
+When the history of different versions of a repository diverge, there are solutions;
+
+- merge/rebase strategies : keep the modifications and arbitrate on conflicts
+- brute force : you can erase (not advised)
+
+**Sometime, it can be trick**
+
+## 2 ways {style="text-align: center;"}
+
+![](./img/rebasemerge.png)
+
+## It can be messy {style="text-align: center;"}
+
+
+![](./img/git-merge.gif)
+
+
+## [Advanced point] .gitignore file
+
+Possibility to exclude files from the tracking
+
+- Data
+- Config files
+- Private information
+
+Add them in a file called .gitignore
+
+## [Advanced point] branches
+
+- Not only one succession of commits
+- But different series in parallel
+- And the possibility to merge from one branch to another
+
+Why ? Test things without modifying the principal branch for instance
+
+## [Advanced point] pull requests
+
+It is a proposed change to a codebaseWhen a pull request is created
+
+- Made on an independant branch
+- Proposed to review for the repository
+- Possibility to discuss on it
+
+# Your project
+
+## How to prepare your project
+
+- Choose a file system easy to use
+    - Adapt it if needed
+- Set up a repository
+- Discuss on how you want to work
+    - Every one can modify
+    - Choose a maintainer
+
+## Our cookie-cutter for the project
+
+- A Github organisation
+- A blank repository playing the part of a [cookiecutter](https://github.com/policyinaction/cookiecutter-project
+)
+
+## Create a fork of the repository
+
+- Fork the repository 
+- Give it a name
+- Change the readme with your name
+
+
+# Other aspects
+
+## Use Onyxia
+
+- [GENES Data Lab](https://onyxia.lab.groupe-genes.fr/account/user-interface), based on a plateforme developed by INSEE
+- Possibility to create temporary services
+- Triple separation
+    - Code
+    - Computation
+    - Data (S3)
+- Add a token in Onyxia
+    - *small demo with Jupyter*
+
+## Style
+
+- "Code is read more often than it is written.
+Code should always be written in a way that promotes readability."
+
+*Guido von Rossum - PEP8 Python*
+
+## Data
+
+- Where to store them ?
+- What are the best format ?
+- What is a good metadata ?
+
+## Software
+
+- How to choose between open and commercial software ?
+- How to keep track of the versions ?
+
+## [Advanced] Virtual environment
+
+- conda / venv for Python
+- renv pour R
+
+# Ressources
+
+- [Version control with Git - Software Carpentry](https://swcarpentry.github.io/git-novice/)
+- [Good practices for statistical projects with R & Git (INSEE)](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R)
+- [Git Reference guidelines](https://git-scm.com/book/en/v2)
+- [An Introduction to Version Control Using GitHub Desktop](https://programminghistorian.org/en/lessons/retired/getting-started-with-github-desktop)
+
+
+
+<!-- 
+
+English
+Focus on project organization (Onyxia only for illustration)
+Group of 13 : 5 former students / 8 new
+
+
+- créer un dépot pour les slides du cours
+- proposer une contribution des étudiants sur les slides du cours
+
+- aller voir les représentations disponibles sur Github
+
+Github action to deploy the quarto ?
+
+-->
