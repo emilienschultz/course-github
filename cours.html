@@ -8,7 +8,7 @@
 <link href="cours_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="cours_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="cours_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.552">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Émilien Schultz - emilien.schultz@ensae.fr">
   <title>Collaborative projects with Github</title>
@@ -345,8 +345,8 @@
 <li><strong>You</strong> ?
 <ul>
 <li>What software/OS are you using ?</li>
-<li>Do you know how to use command line interfaces ?</li>
-<li>Have you heard about git/github a little ?</li>
+<li>How fluent are you with a command line interface (CLI) ?</li>
+<li>What have you heard about Git/Github ?</li>
 </ul></li>
 </ul>
 </section>
@@ -361,38 +361,34 @@
 <h2>Goals</h2>
 <ul>
 <li>Some best practices for collaboration around programming</li>
-<li>Get familiar with GitHub</li>
-<li>Start the structure of a project</li>
+<li>Getting familiar with GitHub</li>
+<li>Starting the structure of a project</li>
 <li>Available resources</li>
-<li>Discuss about coding practices</li>
+<li>Discussing about coding practices</li>
 </ul>
 <p><em>This session will be language agnostique</em></p>
-</section>
-<section id="why-using-it-in-general" class="slide level2">
-<h2>Why using it in general ?</h2>
-<div title="Disclamer">
+<div title="You don't have to know everything">
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Disclamer</strong></p>
+<p><strong>You don’t have to know everything</strong></p>
 </div>
 <div class="callout-content">
-<p>You don’t have to know everything</p>
 <ul>
 <li>There are numerous tutorials</li>
 <li>The general philosophy comes first</li>
-<li>Nevertheless, it can be very useful</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="what-does-it-mean-to-code-for-data-science" class="slide level2">
-<h2>What does it mean to code for data science ?</h2>
+<section id="before-starting-a-reminder" class="slide level2">
+<h2>Before starting, a reminder</h2>
+<p>Data science involve some “scientific programming”</p>
 <ul>
 <li>A Set of Practices
 <ul>
@@ -410,8 +406,9 @@
 </ul></li>
 </ul>
 </section>
-<section id="with-the-challenge-of-working-together" class="slide level2">
-<h2>With the challenge of working together</h2>
+<section id="the-challenge-of-working-together" class="slide level2">
+<h2>The challenge of working together</h2>
+<p>data science project / software programming</p>
 <ul>
 <li>Sharing storage</li>
 <li>Communicating over various channels</li>
@@ -419,8 +416,16 @@
 <li>…</li>
 </ul>
 </section>
-<section id="so-what-possibily-could-go-wrong" class="slide level2">
-<h2>So, what possibily could go wrong ?</h2>
+<section id="what-possibily-could-go-wrong" class="slide level2">
+<h2>What possibily could go wrong ?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/finalfinal.png" class="quarto-figure quarto-figure-center" height="800"></p>
+</figure>
+</div>
+</section>
+<section id="diversity-of-problems" class="slide level2">
+<h2>Diversity of problems</h2>
 <ul>
 <li>Different coding styles leading to chaos</li>
 <li>Asynchronous contributions : conflicts …</li>
@@ -430,13 +435,8 @@
 </ul>
 <p><strong>How to avoid problems (at least some) ?</strong></p>
 </section>
-<section id="a-classic-situation" class="slide level2" style="text-align: center;">
-<h2>A classic situation</h2>
-
-<img data-src="./img/finalfinal.png" class="quarto-figure quarto-figure-center r-stretch" width="600"><p>There are solutions against that…</p>
-</section>
-<section id="first-rule-structuring-a-project" class="slide level2">
-<h2>First rule : Structuring a Project</h2>
+<section id="rule-1-structuring-a-project" class="slide level2">
+<h2>Rule 1 : Structuring a Project</h2>
 <ul>
 <li>Separate code from data
 <ul>
@@ -445,23 +445,35 @@
 </ul></li>
 <li>Document / Comment your productions
 <ul>
-<li>Be explicit</li>
+<li>Be explicit (variables, document file)</li>
+<li><em>Yes, it is boring, but useful</em></li>
 </ul></li>
-<li>Modularize : create distinct elements</li>
+<li>Modularize : create distinct elements
+<ul>
+<li>One file per element</li>
+<li>Function rather than repeating code</li>
+</ul></li>
 </ul>
 </section>
-<section id="second-rule-a-common-file-system" class="slide level2">
-<h2>Second rule : a common file system</h2>
+<section id="rule-2-a-common-file-system" class="slide level2">
+<h2>Rule 2 : a common file system</h2>
 <ul>
-<li>data in a data directory</li>
-<li>scripts in a script directory</li>
-<li>…</li>
+<li>Organize your project
+<ul>
+<li><strong>data</strong> in a data directory</li>
+<li><strong>scripts</strong> in a script directory</li>
+<li><em>what else ?</em></li>
+</ul></li>
+<li>Create a common place to store it</li>
 </ul>
-<p><strong>What are the other elements of a project ?</strong></p>
+</section>
+<section id="rule-3-adopt-code-versionning" class="slide level2">
+<h2>Rule 3 : adopt code versionning</h2>
+<p>Use dedicated tools to manage collaboration with data</p>
 </section>
 <section>
-<section id="next-step-code-management" class="title-slide slide level1 center">
-<h1>Next step : code management</h1>
+<section id="next-step-code-versionning" class="title-slide slide level1 center">
+<h1>Next step : code versionning</h1>
 
 </section>
 <section id="what-is-code-versionning" class="slide level2">
@@ -476,7 +488,7 @@
 <li>difficulty to keep track of the versions</li>
 <li>can be chaos</li>
 </ul></li>
-<li><em>Option 3</em> : each contribution is clearly identified in a shared file system with clear rules of addition</li>
+<li><em>Option 3</em> : each contribution is clearly identified in a distributed file system with clear rules of modification and a tracking of versions</li>
 </ul>
 <p><strong>Entering Git &amp; Github</strong></p>
 </section>
@@ -495,7 +507,7 @@
 <h2>Git and the Linux history</h2>
 <ul>
 <li>An history born from the free software movement</li>
-<li>A bazar of contribution
+<li><a href="https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar">The “bazar” of contribution</a>
 <ul>
 <li>No vertical integration</li>
 </ul></li>
@@ -505,33 +517,45 @@
 </ul></li>
 <li>The big question :
 <ul>
-<li>How to collabore on code</li>
+<li>How to collabore efficiently</li>
 </ul></li>
 </ul>
 </section>
-<section id="git" class="slide level2" style="text-align: center;">
+<section id="git" class="slide level2">
 <h2>Git</h2>
-
-<img data-src="./img/gitxkcd.png" class="r-stretch"><p><a href="https://xkcd.com/1597/">Credits : xkcd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/gitxkcd.png" class="quarto-figure quarto-figure-center" height="800"></p>
+</figure>
+</div>
+<p><a href="https://xkcd.com/1597/">Credits : xkcd</a></p>
 </section>
 <section id="how-does-it-work" class="slide level2">
 <h2>How does it work</h2>
 <ul>
 <li>A base unit : the repository containing everything</li>
-<li>A network of contribution with a unique id</li>
+<li>A network of contribution with a unique id
+<ul>
 <li>Everything recorded</li>
-<li>Possibility to have parallel versions</li>
+</ul></li>
+<li>Different parallel branches</li>
 </ul>
-
-<img data-src="./img/branches.png" data-weight="500" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://lutece.paris.fr/support/jsp/site/Portal.jsp?page=wiki&amp;view=page&amp;page_name=git&amp;language=fr">Source : Lutece.paris.fr</a></p><p><strong>A world in itself…</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/branches.png" height="500"></p>
+<figcaption><a href="https://lutece.paris.fr/support/jsp/site/Portal.jsp?page=wiki&amp;view=page&amp;page_name=git&amp;language=fr">Source : Lutece.paris.fr</a></figcaption>
+</figure>
+</div>
+<p><strong>A world in itself…</strong></p>
 </section>
 <section id="what-is-git-exactly" class="slide level2">
 <h2>What is Git exactly ?</h2>
-<p>Git is a command line tool which allow to :</p>
+<p>Git is a <strong>command line tool</strong> which allows to :</p>
 <ul>
-<li>add modifications to this structure</li>
+<li>add elements to this record</li>
 <li>manage changes (back, forward, fusions)</li>
 <li>natively installed on unix systems</li>
+<li>manage the relation between different repositories</li>
 </ul>
 <p>Over time</p>
 <ul>
@@ -545,8 +569,13 @@
 </section>
 <section id="workflow" class="slide level2" style="text-align: center;">
 <h2>Workflow</h2>
-
-<img data-src="./img/git-committing.svg" class="r-stretch"></section>
+<p>Different steps : stagging, commiting, pushing</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/git-committing.svg" class="quarto-figure quarto-figure-center" height="900"></p>
+</figure>
+</div>
+</section>
 <section id="small-demo-with-the-slides" class="slide level2">
 <h2>Small demo with the slides</h2>
 <ul>
@@ -556,8 +585,8 @@
 <li><code>git init</code> =&gt; a .git directory</li>
 <li><code>git status</code></li>
 <li><code>git add FILE</code> =&gt; staging area</li>
-<li><code>git diff</code></li>
-<li><code>git commit</code> -m “MESSAGE”</li>
+<li><code>git diff HEAD</code></li>
+<li><code>git commit</code> -m “MESSAGE” =&gt; -am to skip the stagging era</li>
 <li><code>git log</code></li>
 </ul></li>
 </ul>
@@ -565,8 +594,12 @@
 <section id="git-messages" class="slide level2" style="text-align: center;">
 <h2>Git messages</h2>
 <p>Clear messages if possible…</p>
-
-<img data-src="./img/git_commit_2x.png" class="r-stretch"><p><a href="https://xkcd.com/1296/">Credit: xkcd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/git_commit_2x.png" class="quarto-figure quarto-figure-center" height="800"></p>
+</figure>
+</div>
+<p><a href="https://xkcd.com/1296/">Credit: xkcd</a></p>
 </section>
 <section id="possibility-to-see-the-diff" class="slide level2">
 <h2>Possibility to see the diff</h2>
@@ -577,12 +610,22 @@
 <li><code>git diff IDCOMIT FILE</code></li>
 </ul></li>
 </ul>
+<p>For instance <code>git diff HEAD^</code> for the last commit</p>
 </section>
 <section id="possibility-to-restore" class="slide level2">
 <h2>Possibility to restore</h2>
+<p>Each state is stored with a 40-digit hash with a 7-digit summary.</p>
+<p>Since there is a complete history, possibility to :</p>
+<ul>
+<li>restore file/files
 <ul>
 <li><code>git restore FILE</code></li>
-<li><code>git reset --hard</code></li>
+<li><code>git reset --hard IDCOMMIT</code></li>
+</ul></li>
+<li>go back to a commit
+<ul>
+<li><code>git checkout IDCOMMIT</code></li>
+</ul></li>
 </ul>
 </section>
 <section id="section" class="slide level2">
@@ -614,24 +657,23 @@
 <div class="columns">
 <div class="column" style="width:70%;">
 <ul>
-<li>A company built on git in 2008
+<li>A startup launched in 2008
 <ul>
-<li>Bought by Microsoft in 2018 (mutation of OS)</li>
+<li>Bought by Microsoft in 2018 (evolution of OS)</li>
 </ul></li>
-<li>Basically : Git on cloud plus services
+<li>Basically : Git on cloud + services
 <ul>
 <li>Centralized repository</li>
 </ul></li>
 <li>A system of rights to access (maintainer, contributor, etc.)</li>
-<li>A new grammar of how to contribute
+<li>A grammar of contribution based on Git
 <ul>
 <li>push, pull, pull request, etc.</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:30%;">
 <p><img data-src="./img/octocat.jpg"> <a href="https://myoctocat.com/build-your-octocat/">Build your octocat</a></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="a-plateforme-for-projects" class="slide level2">
 <h2>A plateforme for projects</h2>
@@ -653,8 +695,8 @@
 <li>Work from multiple machines seemlessly</li>
 </ul>
 </section>
-<section id="github-a-social-media" class="slide level2">
-<h2>Github : a social media</h2>
+<section id="github-also-a-social-media" class="slide level2">
+<h2>Github : also a social media</h2>
 <ul>
 <li>A showcase of projects
 <ul>
@@ -670,6 +712,7 @@
 <li>Communities</li>
 </ul></li>
 </ul>
+<p>More and more used in research</p>
 </section>
 <section id="lets-have-a-look-the-most-famous-repository" class="slide level2">
 <h2>Let’s have a look : the most famous repository</h2>
@@ -692,10 +735,10 @@
 <h2>Github is not alone</h2>
 <p>Other open-source code-sharing platform (“forges” in French)</p>
 <ul>
-<li>SourceForge</li>
-<li>Bitbucket</li>
-<li>Gitlab</li>
-<li>Gitti</li>
+<li><a href="https://sourceforge.net/">SourceForge</a></li>
+<li><a href="https://bitbucket.org/product/">Bitbucket</a></li>
+<li><a href="https://about.gitlab.com/">Gitlab</a></li>
+<li><a href="https://about.gitea.com/">Gitea</a></li>
 </ul>
 </section>
 <section id="diversity-of-uses" class="slide level2">
@@ -759,25 +802,63 @@
 <li>Then, try yourself to make a change</li>
 </ul>
 </section>
-<section id="advanced-point-how-to-resolve-conflicts" class="slide level2">
-<h2>[Advanced point] How to resolve conflicts</h2>
-<p>When the history of different versions of a repository diverge, there are solutions;</p>
+<section id="advanced-branches" class="slide level2">
+<h2>[Advanced] Branches</h2>
+<p>Why ? Test things without modifying the principal branch for instance</p>
 <ul>
-<li>merge/rebase strategies : keep the modifications and arbitrate on conflicts</li>
-<li>brute force : you can erase (not advised)</li>
+<li>Not only one succession of commits</li>
+<li>But different series in parallel</li>
+<li>And the possibility to merge from one branch to another</li>
 </ul>
-<p><strong>Sometime, it can be trick</strong></p>
+<p>Create a branch : <code>git branch NAME</code> or <code>git checkout -b NAME</code>, and change with <code>git switch NAME</code></p>
+</section>
+<section id="lets-create-a-branch" class="slide level2">
+<h2>Let’s create a branch</h2>
+<ul>
+<li>Create a branch</li>
+<li>Swich to the branch</li>
+<li>Make a modification</li>
+<li>Go back to the main</li>
+<li>What happened ?</li>
+<li>Delete the branch</li>
+</ul>
+<p><em>Branches are cheap and easy, so this is a good way to try something out.</em></p>
+</section>
+<section id="advanced-how-to-merge-different-branches" class="slide level2">
+<h2>[Advanced] How to merge different branches</h2>
+<ul>
+<li>When you want to join existing branches</li>
+<li>Or when the remote has to be joined to the local</li>
+</ul>
+<p>Commit history can differ</p>
+<ul>
+<li>merge/rebase strategies : keep the modifications modify the history</li>
+<li>brute force : erase (not advised)</li>
+</ul>
+<p>If the changes don’t conflict, you’re done.</p>
 </section>
 <section id="ways" class="slide level2" style="text-align: center;">
 <h2>2 ways</h2>
-
-<img data-src="./img/rebasemerge.png" class="r-stretch"></section>
-<section id="it-can-be-messy" class="slide level2" style="text-align: center;">
-<h2>It can be messy</h2>
-
-<img data-src="./img/git-merge.gif" class="r-stretch"></section>
-<section id="advanced-point-.gitignore-file" class="slide level2">
-<h2>[Advanced point] .gitignore file</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/rebasemerge.png" class="quarto-figure quarto-figure-center" height="800"></p>
+</figure>
+</div>
+</section>
+<section id="and-if-there-are-conflicts" class="slide level2">
+<h2>And if there are conflicts ?</h2>
+<ul>
+<li>markers will be left in the problematic files showing the conflict;</li>
+<li>you will have to arbitrate.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="./img/git-merge.gif" class="quarto-figure quarto-figure-center" height="500"></p>
+</figure>
+</div>
+</section>
+<section id="advanced-.gitignore-file" class="slide level2">
+<h2>[Advanced] .gitignore file</h2>
 <p>Possibility to exclude files from the tracking</p>
 <ul>
 <li>Data</li>
@@ -786,23 +867,47 @@
 </ul>
 <p>Add them in a file called .gitignore</p>
 </section>
-<section id="advanced-point-branches" class="slide level2">
-<h2>[Advanced point] branches</h2>
+<section id="avanced-set-github-token" class="slide level2">
+<h2>[Avanced] set Github token</h2>
+<p>To be able to push from local to Github remote, you need to specify the auth</p>
 <ul>
-<li>Not only one succession of commits</li>
-<li>But different series in parallel</li>
-<li>And the possibility to merge from one branch to another</li>
+<li>With SSH key if you are using SSH
+<ul>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Create a key, add it to Github repo and your key manager</a></li>
+</ul></li>
+<li>With token
+<ul>
+<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">Create it through the Github interface</a></li>
+<li>Change the <code>remote</code> to add it</li>
+</ul></li>
 </ul>
-<p>Why ? Test things without modifying the principal branch for instance</p>
+<p><code>git remote set-url origin https://ACCOUNT:TOKEN@github.com/REPO.git</code></p>
 </section>
-<section id="advanced-point-pull-requests" class="slide level2">
-<h2>[Advanced point] pull requests</h2>
+<section id="advanced-pull-requests" class="slide level2">
+<h2>[Advanced] pull requests</h2>
 <p>It is a proposed change to a codebaseWhen a pull request is created</p>
 <ul>
 <li>Made on an independant branch</li>
 <li>Proposed to review for the repository</li>
 <li>Possibility to discuss on it</li>
 </ul>
+</section>
+<section id="advanced-a-complete-sequence" class="slide level2">
+<h2><a href="https://git-scm.com/docs/giteveryday">[Advanced++] A complete sequence</a></h2>
+<p>$ git switch -c alsa-audio (1)</p>
+<p>$ edit/compile/test</p>
+<p>$ git restore curses/ux_audio_oss.c (2)</p>
+<p>$ git add curses/ux_audio_alsa.c (3)</p>
+<p>$ edit/compile/test</p>
+<p>$ git diff HEAD (4)</p>
+<p>$ git commit -a -s (5)</p>
+<p>$ edit/compile/test</p>
+<p>$ git diff HEAD^ (6)</p>
+<p>$ git commit -a –amend (7)</p>
+<p>$ git switch master (8)</p>
+<p>$ git merge alsa-audio (9)</p>
+<p>$ git log –since=‘3 days ago’ (10)</p>
+<p>$ git log v2.43.. curses/ (11)</p>
 </section></section>
 <section>
 <section id="your-project" class="title-slide slide level1 center">
@@ -1161,18 +1266,7 @@ Github action to deploy the quarto ?
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1204,7 +1298,29 @@ Github action to deploy the quarto ?
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1212,7 +1328,7 @@ Github action to deploy the quarto ?
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
